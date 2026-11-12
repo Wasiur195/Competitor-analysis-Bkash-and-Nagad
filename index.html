@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bKash vs Nagad: Competitor Analysis</title>
+<meta name="description" content="A product and QA comparison of Bangladesh's two largest mobile wallets, by Wasiur Rahman.">
+<style>
+:root{--bg:#fbfaf8;--surface:#fff;--ink:#1b2333;--muted:#5d6678;--line:#e3e1dc;--bk:#d6126a;--bk-bg:#fdeaf2;--ng:#c96a00;--ng-bg:#fff1de;--ok:#1d7a4d;--chip:#eef0f4}
+@media(prefers-color-scheme:dark){:root{--bg:#14171f;--surface:#1c2029;--ink:#eceef3;--muted:#a3abbb;--line:#2e3441;--bk:#ff5fa2;--bk-bg:#3a1829;--ng:#ffa43d;--ng-bg:#3a2810;--ok:#5fd39b;--chip:#272c38}}
+*{box-sizing:border-box}
+html{scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--bk)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{padding:56px 0 32px;border-bottom:1px solid var(--line)}
+h1{font:700 clamp(2.2rem,6vw,3.6rem)/1.08 Georgia,"Times New Roman",serif;margin:0 0 14px;letter-spacing:-.01em}
+h1 .b{color:var(--bk)}h1 .n{color:var(--ng)}
+.split{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--bk) 50%,var(--ng) 50%);margin:0 0 22px;max-width:220px}
+.lead{font-size:1.15rem;max-width:62ch;margin:0 0 14px}
+.meta{color:var(--muted);font-size:.92rem;margin:0}
+nav{display:flex;flex-wrap:wrap;gap:6px 18px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--ink);text-decoration:underline}
+section{padding:36px 0 8px}
+h2{font:700 1.6rem/1.2 Georgia,"Times New Roman",serif;margin:0 0 14px}
+h3{font-size:1.05rem;margin:22px 0 8px}
+p{margin:0 0 12px;max-width:72ch}
+.note{color:var(--muted);font-size:.9rem}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface);margin:14px 0}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.94rem}
+th,td{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font-weight:700}
+th.bk{background:var(--bk-bg);color:var(--bk)}th.ng{background:var(--ng-bg);color:var(--ng)}
+td:first-child{font-weight:600;width:28%}
+.y{color:var(--ok);font-weight:700}.q{color:var(--muted)}
+.read{border-left:4px solid var(--bk);padding:4px 0 4px 14px;margin:16px 0;max-width:72ch}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
+.col{border-top:5px solid;padding:12px 0 0}
+.col.bk{border-color:var(--bk)}.col.ng{border-color:var(--ng)}
+.col h3{margin-top:0}
+ul{margin:0 0 12px;padding-left:20px;max-width:72ch}li{margin-bottom:6px}
+ol{padding-left:22px;max-width:72ch}ol li{margin-bottom:8px}
+.sum{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:8px;background:var(--surface);margin-top:6px}
+.sum div{padding:16px 18px}.sum div+div{border-left:1px solid var(--line)}
+.sum b{display:block;margin-bottom:4px}
+.src{columns:2;column-gap:28px;font-size:.88rem;padding-left:18px}
+.src li{break-inside:avoid;overflow-wrap:anywhere}
+footer{margin-top:40px;padding:22px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+@media(max-width:700px){.two,.sum{grid-template-columns:1fr}.sum div+div{border-left:0;border-top:1px solid var(--line)}.src{columns:1}header{padding-top:36px}}
+a:focus-visible{outline:3px solid var(--ng);outline-offset:2px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="split" aria-hidden="true"></div>
+<h1><span class="b">bKash</span> vs <span class="n">Nagad</span><br>Competitor analysis</h1>
+<p class="lead">A product and QA comparison of Bangladesh's two largest mobile wallets: features, user experience signals, market context, opportunities, and test ideas.</p>
+<p class="meta">By Wasiur Rahman. November 2026. Based on public sources only; no internal company data.</p>
+</div></header>
+<div class="wrap">
+<nav aria-label="Sections"><a href="#summary">Summary</a><a href="#snapshot">Snapshot</a><a href="#features">Features</a><a href="#ux">User experience</a><a href="#swot">Strengths and weaknesses</a><a href="#opportunities">Opportunities</a><a href="#tests">Test ideas</a><a href="#sources">Sources</a></nav>
+
+<section id="summary">
+<h2>Summary</h2>
+<div class="sum">
+<div><b style="color:var(--bk)">bKash</b>Market leader with the broader app: savings, loans through bank partners, insurance, subscriptions, games, and in-app complaints since January 2026.</div>
+<div><b style="color:var(--ng)">Nagad</b>Strong on daily-life services and inclusion: travel tickets, tolls, government payments, an Islamic wallet, Bangla and English UI, and Bangla QR. Redesigned app in October 2026.</div>
+<div><b>The gap</b>Simple, reliable, Bangla-first payments. Public reviews point to OTP delivery and stability after OS updates as pain points.</div>
+</div>
+<p class="note" style="margin-top:12px">Sections marked as hypotheses are my own analysis and should be validated with user research. Features change often, so check the live apps before relying on any detail.</p>
+</section>
+
+<section id="snapshot">
+<h2>Snapshot</h2>
+<div class="tablebox"><table>
+<tr><th></th><th class="bk">bKash</th><th class="ng">Nagad</th></tr>
+<tr><td>Position</td><td>Market leader</td><td>Clear number two</td></tr>
+<tr><td>Launched</td><td>2011, bank-led MFS (BRAC Bank subsidiary)</td><td>2019, service of Bangladesh Post Office</td></tr>
+<tr><td>Reported users</td><td>About 80 million verified (older report); 85 million+ (2026 report)</td><td>40-50 million customers (central bank governor, March 2026)</td></tr>
+<tr><td>Share of MFS transactions</td><td>Estimates vary: about 45% (some official data) to 60-75% (industry estimates)</td><td>About 18-20% (analyst estimate)</td></tr>
+<tr><td>Android rating</td><td>About 4.27 (1.6M ratings)</td><td>About 3.98 (about 504K ratings)</td></tr>
+<tr><td>iOS rating</td><td>About 3.85 (13.3K ratings)</td><td>About 3.58 (4.6K ratings)</td></tr>
+<tr><td>Latest app news</td><td>Self-complaint feature (Jan 2026), Game Zone (Jun 2026), bank services in the app</td><td>Redesigned app (Oct 2026), Bangla QR (Jun 2026)</td></tr>
+</table></div>
+<p class="note">Ratings are approximate AppGoblin snapshots from 2026 and differ by storefront and date. Market-share figures differ by source and method, so read them as ranges.</p>
+</section>
+
+<section id="features">
+<h2>Feature comparison</h2>
+<p class="note"><span class="y">Yes</span> means reported in sources. <span class="q">Not confirmed</span> means I did not find it in my research; it may still exist.</p>
+<div class="tablebox"><table>
+<tr><th>Feature</th><th class="bk">bKash</th><th class="ng">Nagad</th></tr>
+<tr><td>Send money (P2P)</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+<tr><td>Mobile recharge</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+<tr><td>QR payment</td><td class="y">Yes</td><td class="y">Yes (Bangla QR)</td></tr>
+<tr><td>Utility and bill payment</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+<tr><td>Add money from bank or card</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+<tr><td>Bank and MFS interoperability</td><td class="y">Yes (bKash-to-bank)</td><td class="y">Yes (NPSB)</td></tr>
+<tr><td>Savings and DPS</td><td class="y">Yes (bank partners)</td><td class="q">Not confirmed; fixed deposits announced</td></tr>
+<tr><td>Loans</td><td class="y">Yes (bank partners)</td><td>Repayment yes; loans announced</td></tr>
+<tr><td>Insurance</td><td class="y">Yes (health, life)</td><td>Premium payment yes; insurance announced</td></tr>
+<tr><td>Subscriptions (OTT)</td><td class="y">Yes</td><td class="q">Not confirmed</td></tr>
+<tr><td>Donations and Zakat</td><td class="y">Yes</td><td class="y">Yes (plus Zakat calculator)</td></tr>
+<tr><td>Travel tickets, hotels, tolls</td><td class="q">Not confirmed</td><td class="y">Yes (bus, train, air, hotel, RFID/QR tolls)</td></tr>
+<tr><td>Islamic wallet variant</td><td class="q">Not confirmed</td><td class="y">Yes (Nagad Islamic)</td></tr>
+<tr><td>Government payments</td><td class="q">Not confirmed</td><td class="y">Yes (for example stipends)</td></tr>
+<tr><td>Games</td><td class="y">Yes (Game Zone)</td><td class="q">Not confirmed</td></tr>
+<tr><td>In-app complaints</td><td class="y">Yes (since Jan 2026)</td><td class="q">Not confirmed</td></tr>
+<tr><td>Themes and shortcuts</td><td class="y">Yes</td><td class="q">Not confirmed</td></tr>
+<tr><td>Offers and rewards</td><td class="y">Yes</td><td class="y">Yes (home screen offers)</td></tr>
+<tr><td>Explore without an account</td><td class="y">Yes</td><td class="q">Not confirmed</td></tr>
+<tr><td>Bangla and English UI</td><td class="q">Not confirmed</td><td class="y">Yes</td></tr>
+<tr><td>Biometric login</td><td class="q">Not confirmed</td><td class="y">Yes</td></tr>
+<tr><td>NID-based registration in app</td><td class="y">Yes</td><td class="y">Yes (NID, selfie, signature)</td></tr>
+</table></div>
+<div class="read"><b>Reading the table.</b> bKash is stronger on financial depth and engagement. Nagad is stronger on daily-life coverage and inclusion. Both are heading toward the same all-in-one app.</div>
+</section>
+
+<section id="ux">
+<h2>User experience and quality signals</h2>
+<ul>
+<li><b>Ratings:</b> bKash scores higher on both stores, and its Android rating base is about three times larger.</li>
+<li><b>Nagad review themes</b> (review dates vary): OTP not arriving, crashes after an iOS update, and card add-money failures.</li>
+<li><b>bKash wish list from reviews:</b> an iOS merchant app, system-wide dark mode, and more flexible bank transfers.</li>
+<li><b>Release pace:</b> Nagad ships frequent point releases. Its October 2026 redesign claims faster response and load times and a multi-layer security framework.</li>
+<li><b>Support:</b> bKash users can now file complaints for bank transfers, savings, recharge, and bill payments inside the app.</li>
+<li><b>Market context:</b> bKash is widely reported as dominant. Nagad operates under an interim central bank approval with an administrator appointed in August 2024, per 2025-2026 reports. This can change, so check the latest.</li>
+</ul>
+<p class="note">This section uses public reviews and press releases, not hands-on testing.</p>
+</section>
+
+<section id="swot">
+<h2>Strengths and weaknesses</h2>
+<p class="note">My analysis.</p>
+<div class="two">
+<div class="col bk"><h3 style="color:var(--bk)">bKash</h3>
+<p><b>Strengths:</b> scale, brand trust, broad services, bank partnerships, in-app support, strong ratings.</p>
+<p><b>Weaknesses:</b> dominance invites regulatory attention; fast feature growth adds complexity; users still ask for modern conveniences like dark mode.</p>
+<p><b>Opportunities:</b> deeper lending, insurance, and savings; richer personalisation.</p>
+<p><b>Threats:</b> interoperable payments such as QR and NPSB reduce lock-in.</p></div>
+<div class="col ng"><h3 style="color:var(--ng)">Nagad</h3>
+<p><b>Strengths:</b> wide daily-life services, Bangla and English, Islamic wallet, interoperability, quick release pace.</p>
+<p><b>Weaknesses:</b> lower ratings, recurring OTP and stability complaints, and announced financial services that are not live yet.</p>
+<p><b>Opportunities:</b> finish the lending, deposit, and insurance roadmap; build on ticketing and government payments.</p>
+<p><b>Threats:</b> regulatory uncertainty and the trust challenge that follows it.</p></div>
+</div>
+</section>
+
+<section id="opportunities">
+<h2>Opportunities for a Bangladesh-focused mobile product</h2>
+<p class="note">Hypotheses to validate with user research.</p>
+<ol>
+<li><b>Bangla-first, simple-language UX</b> with an easy switch to English.</li>
+<li><b>Reliability as a feature:</b> fast OTP delivery, resilience after OS updates, and clear error recovery.</li>
+<li><b>Low-friction onboarding</b> around NID verification, since both apps depend on it.</li>
+<li><b>Interoperable payments:</b> support Bangla QR and bank transfers across wallets so users are never locked in.</li>
+<li><b>Context-aware services:</b> bundle frequent tasks such as bills, recharge, and tickets into a few taps, and surface relevant offers.</li>
+<li><b>Trust and safety:</b> visible security controls, scam education, and quick complaint handling.</li>
+</ol>
+</section>
+
+<section id="tests">
+<h2>Test ideas for payment apps</h2>
+<div class="tablebox"><table>
+<tr><th>Area</th><th>Example scenarios</th><th>Why it matters</th></tr>
+<tr><td>Payment calculation</td><td>Fees, limits, discounts, and cashback combined; rounding</td><td>Money accuracy is the core of trust</td></tr>
+<tr><td>Authentication</td><td>OTP delay, expiry, resend, wrong PIN, biometric fallback</td><td>OTP issues appear in public complaints</td></tr>
+<tr><td>Device and OS</td><td>Latest and older Android and iOS, low-end devices, screen sizes</td><td>Crashes after OS updates are reported</td></tr>
+<tr><td>Interoperability</td><td>Bank to wallet and back, QR across providers, timeout recovery</td><td>Money must never be lost or duplicated</td></tr>
+<tr><td>Localization</td><td>Bangla and English text, number and date formats, long labels</td><td>Local users need a clear UI</td></tr>
+<tr><td>Network resilience</td><td>Dropped connection mid-transaction, retry, duplicate submission</td><td>Real conditions are not perfect</td></tr>
+<tr><td>Offers and rewards</td><td>Eligibility, validity window, stacking rules, expiry</td><td>Campaign logic is a frequent bug source</td></tr>
+<tr><td>Reports and statements</td><td>Transaction history and statement accuracy</td><td>Users rely on records</td></tr>
+</table></div>
+</section>
+
+<section id="sources">
+<h2>Sources</h2>
+<p class="note">Public sources, collected November 2026.</p>
+<ul class="src">
+<li><a href="https://www.bkash.com/en/blog/game-zone-launched-in-bkash-app">bKash Game Zone launch</a></li>
+<li><a href="https://today.thefinancialexpress.com.bd/print/bkash-customers-can-now-make-complaints-through-its-app-1768842977">bKash in-app complaints (Financial Express)</a></li>
+<li><a href="https://www.dhakatribune.com/business/423112/trust-bank-services-including-savings-and-loan">Trust Bank services on bKash (Dhaka Tribune)</a></li>
+<li><a href="https://www.tbsnews.net/supplement/how-bkash-app-becomes-part-everyday-lifestyle-millions-1178881">bKash app features (TBS)</a></li>
+<li><a href="https://www.tbsnews.net/node/1452711">bKash OTT subscriptions (TBS)</a></li>
+<li><a href="https://appgoblin.info/apps/com.bKash.customerapp">bKash store data, Android (AppGoblin)</a></li>
+<li><a href="https://appgoblin.info/apps/1351183172">bKash store data, iOS (AppGoblin)</a></li>
+<li><a href="https://bssnews.net/business/434397">Nagad new app (BSS, Oct 2026)</a></li>
+<li><a href="https://observerbd.com/news/580856">Nagad Bangla QR and NPSB (Observer BD)</a></li>
+<li><a href="https://freedom251.com/apps/nagad/">Nagad service listing (Freedom251)</a></li>
+<li><a href="https://www.nsave.com/bangladesh/nagad">Nagad account and Islamic features (nSave)</a></li>
+<li><a href="https://appgoblin.info/apps/com.konasl.nagad">Nagad store data, Android (AppGoblin)</a></li>
+<li><a href="https://appgoblin.info/apps/1471844924">Nagad store data, iOS (AppGoblin)</a></li>
+<li><a href="https://www.tbsnews.net/node/1377551">Nagad status (TBS, Mar 2026)</a></li>
+<li><a href="https://www.thedailystar.net/business/news/bb-withdraws-top-official-nagad-4192981">Nagad interim approval (The Daily Star)</a></li>
+<li><a href="https://observerbd.com/news/577025">MFS market share (Observer BD)</a></li>
+<li><a href="https://eng.insurancenewsbd.com/article/news/6637">MFS market share estimates (Insurance News BD)</a></li>
+</ul>
+</section>
+
+<footer>An independent analysis for learning and portfolio purposes. Not affiliated with bKash, Nagad, or any related company. Details and figures may have changed since publication.</footer>
+</div>
+</body>
+</html>
